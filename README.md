@@ -1,30 +1,27 @@
+네, 알겠습니다. 아이콘(이모지)을 모두 제거하고, 기술 스택 뱃지도 모두 텍스트로 바꾼 깔끔한 버전으로 다시 정리해 드릴게요.
+
+-----
+
 # CARGO AI
 
-[](https://flask.palletsprojects.com/)
-[](https://reactjs.org/)
-[](https://www.mysql.com/)
-[](https://www.docker.com/)
-[](https://github.com/features/actions)
+**AI 기반 효율화를 통한 지능형 물류 최적화 플랫폼**
 
-[cite\_start]**AI 기반 효율화를 통한 지능형 물류 최적화 플랫폼** [cite: 2]
+## 1\. 프로젝트 소개 (About)
 
-## 1\. 🔍 프로젝트 소개 (About)
+**CARGO AI**는 기존의 비효율적인 미들마일(Middle-Mile) 물류 시장의 문제를 해결하기 위한 지능형 물류 최적화 플랫폼입니다.
 
-[cite\_start]**CARGO AI**는 기존의 비효율적인 미들마일(Middle-Mile) 물류 시장의 문제를 해결하기 위한 지능형 물류 최적화 플랫폼입니다. [cite: 2, 121]
+전화, 문자 등 수동 배차 방식과 높은 공차율 (30-40%), 불투명하고 지연되는 정산 시스템 등 고질적인 문제들을 AI 기반 자동화 시스템으로 해결하는 것을 목표로 합니다.
 
-[cite\_start]전화, 문자 등 수동 배차 방식 [cite: 142, 145][cite\_start]과 높은 공차율 (30-40%) [cite: 144, 146][cite\_start], 불투명하고 지연되는 정산 시스템 [cite: 151, 152] [cite\_start]등 고질적인 문제들을 AI 기반 자동화 시스템으로 해결하는 것을 목표로 합니다. [cite: 164]
+단순 배차를 넘어 \*\*[예측 - 추천 - 정산]\*\*에 이르는 물류 매칭의 전 과정을 AI가 대신 수행합니다.
 
-[cite\_start]단순 배차를 넘어 \*\*[예측 - 추천 - 정산]\*\*에 이르는 물류 매칭의 전 과정을 AI가 대신 수행합니다. [cite: 276, 280]
+## 2\. 주요 목표 (Goals)
 
-## 2\. 🎯 주요 목표 (Goals)
+  * **정밀·유연한 AI 기반 화물 매칭 시스템 구축**
+  * **AI 추천 기반 자동 배차 시스템 구현**
+  * **복화물 매칭 및 정산 자동화**를 통한 기사 수익 안정화 및 화주 매칭 성공률 개선
+  * `nDCG` 지표 기반의 추천 성능 최적화
 
-  * [cite\_start]**정밀·유연한 AI 기반 화물 매칭 시스템 구축** [cite: 314]
-  * [cite\_start]**AI 추천 기반 자동 배차 시스템 구현** [cite: 318]
-  * [cite\_start]**복화물 매칭 및 정산 자동화**를 통한 기사 수익 안정화 및 화주 매칭 성공률 개선 [cite: 319, 321]
-  * [cite\_start]`nDCG` 지표 기반의 추천 성능 최적화 [cite: 320]
-
-
-## 3\. 🛠️ 기술 스택 (Tech Stack)
+## 3\. 기술 스택 (Tech Stack)
 
 | 구분 | 기술 |
 | :--- | :--- |
@@ -35,81 +32,89 @@
 | **DevOps** | **Docker**, **GitHub Actions** (CI/CD) |
 | **API** | Tmap API (데이터 생성용) |
 
-## 4\. ✨ 주요 기능 (Features)
+## 4\. 주요 기능 (Features)
 
-### [cite\_start]🚚 화주 (Shipper) [cite: 84]
+### 화주 (Shipper)
 
-  * [cite\_start]**신규 운송 신청**: 출발지, 도착지, 화물 정보(중량, 종류 등) 등록 [cite: 83, 99]
-  * [cite\_start]**AI 기사 추천**: AI가 추천한 최적의 기사 리스트 확인 및 선택 [cite: 100, 810]
-  * [cite\_start]**실시간 관제**: 내 운송 내역에서 화물의 실시간 위치 확인 [cite: 87, 101, 823]
-  * [cite\_start]**결제 및 정산**: 운송 완료 후 요금 결제 [cite: 88, 102]
+  * **신규 운송 신청**: 출발지, 도착지, 화물 정보(중량, 종류 등) 등록
+  * **AI 기사 추천**: AI가 추천한 최적의 기사 리스트 확인 및 선택
+  * **실시간 관제**: 내 운송 내역에서 화물의 실시간 위치 확인
+  * **결제 및 정산**: 운송 완료 후 요금 결제
 
-### [cite\_start]🚛 기사 (Driver) [cite: 85]
+### 기사 (Driver)
 
-  * [cite\_start]**운송 요청 응답**: 화주의 운송 요청 목록 확인 및 수락/거절 [cite: 90, 105]
-  * [cite\_start]**실시간 네비게이션**: TMAP API 기반 최적 경로 안내 [cite: 92, 106, 819]
-  * [cite\_start]**운송 내역 관리**: 완료된 운송 내역 및 상태 확인 [cite: 91]
-  * [cite\_start]**정산 관리**: 월별 정산 금액 확인 및 자동 정산 [cite: 93, 107]
+  * **운송 요청 응답**: 화주의 운송 요청 목록 확인 및 수락/거절
+  * **실시간 네비게이션**: TMAP API 기반 최적 경로 안내
+  * **운송 내역 관리**: 완료된 운송 내역 및 상태 확인
+  * **정산 관리**: 월별 정산 금액 확인 및 자동 정산
 
-### [cite\_start]👤 공통 (Guest) [cite: 117]
+### 공통 (Guest)
 
-  * [cite\_start]회원가입 (화주/기사) [cite: 95, 110]
-  * [cite\_start]JWT 기반 로그인 [cite: 70, 74, 96, 111]
+  * 회원가입 (화주/기사)
+  * JWT 기반 로그인
 
-## 5\. 🧠 AI 매칭 시스템 상세
+## 5\. AI 매칭 시스템 상세
 
-[cite\_start]본 프로젝트의 핵심은 **Learning-to-Rank (LTR) 기반 추천 시스템**입니다. [cite: 548]
+본 프로젝트의 핵심은 **Learning-to-Rank (LTR) 기반 추천 시스템**입니다.
 
-### [cite\_start]A. 추천 모델: `LGBMRanker` [cite: 551]
+### A. 추천 모델: `LGBMRanker`
 
-  * [cite\_start]단순 분류/회귀가 아닌, 특정 화물 요청(Query)에 대한 기사(Item) 리스트의 **최적 순위**를 학습합니다. [cite: 549, 551]
-  * [cite\_start]**평가 지표**: **nDCG (Normalized Discounted Cumulative Gain)** 를 사용하여 추천 리스트의 순서가 얼마나 이상적인지 정량적으로 평가합니다. [cite: 608, 628]
-  * [cite\_start]**최종 성과**: `nDCG@5 = 0.7867` (AI가 추천한 상위 5명의 기사 리스트가 이상적인 순서의 약 78.7% 수준에 도달) [cite: 632, 633, 634]
+  * 단순 분류/회귀가 아닌, 특정 화물 요청(Query)에 대한 기사(Item) 리스트의 **최적 순위**를 학습합니다.
+  * **평가 지표**: **nDCG (Normalized Discounted Cumulative Gain)** 를 사용하여 추천 리스트의 순서가 얼마나 이상적인지 정량적으로 평가합니다.
+  * **최종 성과**: `nDCG@5 = 0.7867` (AI가 추천한 상위 5명의 기사 리스트가 이상적인 순서의 약 78.7% 수준에 도달)
 
-### [cite\_start]B. 매칭 시스템 작동 방식 [cite: 513]
+### B. 매칭 시스템 작동 방식
 
-1.  [cite\_start]**화물 요청 접수**: 화주가 화물 정보 입력 시 매칭 시작 [cite: 529, 530]
-2.  [cite\_start]**기본 필터링**: 차량 적합성(무게, 종류) 등 Rule-Based 필터링 [cite: 498, 533, 534]
-3.  [cite\_start]**후보 압축**: 1차로 상차지 기준 50km 반경 내 기사만 추출 [cite: 535]
-4.  [cite\_start]**LightGBM 점수화**: `LGBMRanker` 모델이 후보 기사들의 점수를 예측 (주요 피처: 거리, 평점, 수락률 등) [cite: 538, 539]
-5.  [cite\_start]**Top-N 추천**: 예측 점수가 가장 높은 상위 10명의 기사를 화주에게 추천 [cite: 541, 544]
+1.  **화물 요청 접수**: 화주가 화물 정보 입력 시 매칭 시작
+2.  **기본 필터링**: 차량 적합성(무게, 종류) 등 Rule-Based 필터링
+3.  **후보 압축**: 1차로 상차지 기준 50km 반경 내 기사만 추출
+4.  **LightGBM 점수화**: `LGBMRanker` 모델이 후보 기사들의 점수를 예측 (주요 피처: 거리, 평점, 수락률 등)
+5.  **Top-N 추천**: 예측 점수가 가장 높은 상위 10명의 기사를 화주에게 추천
 
-### [cite\_start]C. 핵심 과제: 효율성(Efficiency) vs 공정성(Fairness) [cite: 636]
+### C. 핵심 과제: 효율성(Efficiency) vs 공정성(Fairness)
 
-  * [cite\_start]**문제점 (Winner-take-all)**: 효율성(수락률, 평점 등)만 고려할 경우, 상위 소수 기사에게만 배차가 집중되어 신규/저활동 기사의 이탈 리스크가 발생합니다. [cite: 559, 642, 643]
-  * [cite\_start]**1단계 해결 (Fairness-aware Re-ranking)**: [cite: 647]
-      * [cite\_start]`break_time` (최근 휴식 시간), `new_driver` (신규 기사 여부) 등 공정성 피처를 추가합니다. [cite: 587]
-      * [cite\_start]누적 일감이 적거나 휴식 시간이 길었던 기사에게 **점수 보정**을 적용하여 추천 순위를 재조정합니다. [cite: 588, 590]
-  * [cite\_start]**향후 목표 (Multi-Objective Optimization)**: [cite: 672]
-      * [cite\_start]추천 정확도(nDCG)와 불균형(Gini)을 동시에 최적화하는 다목적 손실 함수 $Loss = \alpha \cdot L_{rank} + (1-\alpha) \cdot L_{fairness}$ 를 도입하여 근본적인 균형을 달성합니다. [cite: 658, 661, 662]
+  * **문제점 (Winner-take-all)**: 효율성(수락률, 평점 등)만 고려할 경우, 상위 소수 기사에게만 배차가 집중되어 신규/저활동 기사의 이탈 리스크가 발생합니다.
+  * **1단계 해결 (Fairness-aware Re-ranking)**:
+      * `break_time` (최근 휴식 시간), `new_driver` (신규 기사 여부) 등 공정성 피처를 추가합니다.
+      * 누적 일감이 적거나 휴식 시간이 길었던 기사에게 **점수 보정**을 적용하여 추천 순위를 재조정합니다.
+  * **향후 목표 (Multi-Objective Optimization)**:
+      * 추천 정확도(nDCG)와 불균형(Gini)을 동시에 최적화하는 다목적 손실 함수 $Loss = \alpha \cdot L_{rank} + (1-\alpha) \cdot L_{fairness}$ 를 도입하여 근본적인 균형을 달성합니다.
 
-## 6\. 🚀 향후 고도화 계획 (Future Work)
+## 6\. 향후 고도화 계획 (Future Work)
 
-  * [cite\_start]**최적의 복화물 매칭 (Multi-Truck Haul Trip)**: 1차 운송 완료 시, 도착지 기준 2차 화물을 즉시 추천하여 공차율을 최소화하고 기사 수익을 극대화합니다. [cite: 732, 741, 746]
-  * [cite\_start]**Two-Tower + LightGBM**: 수십만 기사 중 100\~200명의 후보를 빠르게 추출(Retrieval)한 후, LGBM으로 정밀 랭킹(Ranking)을 수행하는 2단계 모델을 도입합니다. [cite: 724, 725]
-  * [cite\_start]**MAB (Multi-Armed Bandit)**: 여러 추천 전략 중 매칭 성공률이 높은 방식을 실시간으로 채택하여 최적의 전략을 탐색합니다. [cite: 730, 734]
-  * [cite\_start]**GNN / RL 도입 연구**: 기사 이동 패턴 및 장기 최적화를 위한 차세대 AI 모델 도입을 검토합니다. [cite: 733, 738]
+  * **최적의 복화물 매칭 (Multi-Truck Haul Trip)**: 1차 운송 완료 시, 도착지 기준 2차 화물을 즉시 추천하여 공차율을 최소화하고 기사 수익을 극대화합니다.
+  * **Two-Tower + LightGBM**: 수십만 기사 중 100\~200명의 후보를 빠르게 추출(Retrieval)한 후, LGBM으로 정밀 랭킹(Ranking)을 수행하는 2단계 모델을 도입합니다.
+  * **MAB (Multi-Armed Bandit)**: 여러 추천 전략 중 매칭 성공률이 높은 방식을 실시간으로 채택하여 최적의 전략을 탐색합니다.
+  * **GNN / RL 도입 연구**: 기사 이동 패턴 및 장기 최적화를 위한 차세대 AI 모델 도입을 검토합니다.
 
-## 7\. 🗓️ 프로젝트 기간 (Timeline)
+## 7\. 프로젝트 기간 (Timeline)
 
-  * [cite\_start]**총 기간**: 2025.07.07 \~ 2025.07.22 [cite: 3]
+  * **총 기간**: 2025.07.07 \~ 2025.07.22
 
-## 8\. 👨‍👩‍👧‍👦 팀 구성원 (Team)
+## 8\. 팀 구성원 (Team)
 
 | 이름 | 역할 |
 | :--- | :--- |
-| **임규리** | [cite\_start]Front-end, QA 테스트 [cite: 25, 35] |
-| **황수용** | [cite\_start]PM, 시스템 설계, Back-end (API) [cite: 29, 38] |
-| **박예슬** | [cite\_start]Back-end, AI 모델링 [cite: 27, 37] |
-| **손유빈** | [cite\_start]Back-end, AI 모델링 [cite: 28, 39] |
-| **김유신** | [cite\_start]Front-end, AI 모델링 [cite: 26, 36] |
+| **임규리** | Front-end, QA 테스트 |
+| **황수용** | PM, 시스템 설계, Back-end (API) |
+| **박예슬** | Back-end, AI 모델링 |
+| **손유빈** | Back-end, AI 모델링 |
+| **김유신** | Front-end, AI 모델링 |
+
+## 9\. 서비스 시연 (Demo)
+
+### 1\. 주요 기능 화면 (예시)
+
+| 로그인 | 화물 등록 | AI 추천 |
+| :---: | :---: | :---: |
+| `![로그인 화면](./assets/login.png)` | `![화물 등록](./assets/register.png)` | `![AI 추천](./assets/recommend.png)` |
+
+*(이 부분은 실제 이미지 파일을 `assets` 같은 폴더에 넣으신 후, 경로를 맞게 수정해 주세요.)*
 
 <br>
 
 ### 2\. 프로젝트 시연 영상
 
-[](https://www.google.com/url?sa=E&source=gmail&q=https://www.youtube.com/watch?v=DlfMf44-ZyM)
+[](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3DDlfMf44-ZyM)
 
 **(▲ 썸네일을 클릭하면 시연 영상으로 이동합니다.)**
-
------
