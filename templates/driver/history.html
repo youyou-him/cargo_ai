@@ -1,0 +1,44 @@
+{% extends "driver_base.html" %}
+
+{% block title %}운송 내역 - 화물 AI 서비스{% endblock %}
+
+{% block content %}
+<div id="driver-history-screen" class="p-4">
+    <div class="flex items-center mb-6">
+        <h2 class="text-xl font-bold text-gray-800">운송 내역</h2>
+    </div>
+
+    <div class="bg-gray-50 p-4 rounded-xl mb-6 flex justify-between items-center">
+        <span class="text-gray-600">운송 중</span>
+        <span class="font-bold text-indigo-600 text-xl">{{ matches|length }}건</span>
+    </div>
+
+    {% for match in matches %}
+    <div
+        class="bg-white p-4 rounded-xl shadow-sm mb-4 cursor-pointer"
+        onclick="window.location.href='{{ url_for('navigation_page', match_id=match.id) }}'">
+        <div class="flex items-center justify-between">
+            <div>
+                <!-- 화주 정보 -->
+                <p class="font-semibold text-gray-800">{{ match.company_name }}</p>
+                <!-- 운송 구간 -->
+                <p class="text-sm text-gray-600">{{ match.origin }} → {{ match.destination }}</p>
+                <!-- 요청 시간 및 화물 정보 -->
+                <p class="text-sm text-gray-600">
+                    요청: {{ match.request_time.strftime('%Y-%m-%d') if match.request_time else '없음' }}
+                    | 물품: {{ match.cargo_type }} ({{ match.weight }}kg)
+                </p>
+                <!-- 매칭 생성 시간 -->
+                <p class="text-sm text-gray-500">
+                    매칭 시간: {{ match.created_at.strftime('%Y-%m-%d %H:%M') if match.created_at else '없음' }}
+                </p>
+                <!-- 운임 가격 -->
+                <p class="text-lg font-bold text-gray-800 mt-1">
+                    {{ "{:,}".format(match.price or 0) }}원
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

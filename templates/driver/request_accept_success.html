@@ -1,0 +1,38 @@
+{% extends "driver_base.html" %}
+
+{% block title %}운송 요청 수락 완료 - 화물 AI 서비스{% endblock %}
+
+{% block content %}
+<div class="max-w-sm mx-auto bg-white rounded-2xl shadow-lg p-6 mt-8 text-center space-y-6">
+    <h2 class="text-2xl font-bold text-indigo-700">운송 요청 수락 완료!</h2>
+    <p class="text-gray-700 text-base leading-relaxed">
+        <strong>운송 요청</strong>이 <strong>성공적</strong>으로 수락되었습니다.
+        <br>
+        <strong>화주</strong>님이 확인 후 <strong>연락드릴 예정</strong>입니다.
+    </p>
+
+    <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-left space-y-3">
+        <div>
+            <p class="text-sm text-gray-500 font-semibold">운송 구간</p>
+            <p class="text-base text-gray-800 font-medium">출발지 : {{ request_info.origin}}</p>
+            <p class="text-base text-gray-800 font-medium">도착지 : {{ request_info.destination}}</p>
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 font-semibold">예상 순수익  </p>
+            <p class="text-lg font-bold text-green-600">{{  "{:,}".format((request_info.price * 0.95) | round(0) | int) }}원</p>
+        </div>
+    </div>
+
+    <div class="space-y-3 pt-2">
+        <a href="{{ url_for('navigation_page', request_id = request_id) }}"
+           class="block w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition">
+            내비게이션 보기 🗺️
+        </a>
+        <a href="{{ url_for('driver_dashboard') }}"
+           class="block w-full bg-indigo-600 text-white py-3 rounded-xl font-semibold hover:bg-indigo-700 transition">
+            홈으로 돌아가기
+        </a>
+    </div>
+</div>
+
+{% endblock %}

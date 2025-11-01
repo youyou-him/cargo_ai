@@ -1,0 +1,45 @@
+{% extends "admin/dashboard_base.html" %}
+
+{% block title %}화물 AI 관제 - 대시보드{% endblock %}
+
+{% block head_extra %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="content-area">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">대시보드</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        
+        <!-- 현재 운송 중 -->
+        <div class="bg-indigo-600 text-white p-6 rounded-xl shadow-lg">
+            <p class="text-sm opacity-90">현재 운송 중</p>
+            <p class="text-5xl font-extrabold mt-2">{{ 운송중_건수 }} <span class="text-2xl font-normal">건</span></p>
+        </div>
+
+        <!-- 가용 기사 -->
+        <div class="bg-green-600 text-white p-6 rounded-xl shadow-lg">
+            <p class="text-sm opacity-90">가용 기사</p>
+            <p class="text-5xl font-extrabold mt-2">{{ 가용_기사_수 }} <span class="text-2xl font-normal">명</span></p>
+        </div>
+
+        <!-- 매칭 성공률 (현재는 하드코딩 유지) -->
+        <div class="bg-yellow-600 text-white p-6 rounded-xl shadow-lg">
+            <p class="text-sm opacity-90">매칭 성공률</p>
+            <p class="text-5xl font-extrabold mt-2">92<span class="text-2xl font-normal">%</span></p>
+        </div>
+
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg mb-8">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-5">지역 검색</h3>
+        <div class="h-96 bg-gray-100 rounded-xl flex items-center justify-center text-gray-500">
+            [Tmap API 연동 실시간 전체 운송 지도]
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}
