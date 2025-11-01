@@ -26,7 +26,7 @@
 | **Database** | **MySQL**, **Hive** |
 | **ML / Data** | **LightGBM (LGBMRanker)**, **Scikit-learn**, **NumPy**, Imbalanced-learn, Joblib |
 | **DevOps** | **Docker**, **GitHub Actions** (CI/CD) |
-| **API** | Tmap API (데이터 생성용) |
+| **API** | Tmap API |
 
 ## 4\. 주요 기능 (Features)
 
