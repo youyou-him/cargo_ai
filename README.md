@@ -103,18 +103,18 @@
 
 ## 9\. 서비스 시연 (Demo)
 
-### 1\. 주요 기능 화면 (예시)
+### 1. 주요 기능 화면 (예시)
 
 | 로그인 | 화물 등록 | AI 추천 |
 | :---: | :---: | :---: |
-| `![로그인 화면](./assets/login.png)` | `![화물 등록](./assets/register.png)` | `![AI 추천](./assets/recommend.png)` |
+| ![로그인 화면](./assets/login.png) | ![화물 등록](./assets/register.png) | ![AI 추천](./assets/recommend.png) |
 
 *(이 부분은 실제 이미지 파일을 `assets` 같은 폴더에 넣으신 후, 경로를 맞게 수정해 주세요.)*
 
 <br>
 
-### 2\. 프로젝트 시연 영상
+### 2. 프로젝트 시연 영상
 
-[](https://www.google.com/search?q=https://www.youtube.com/watch%3Fv%3DDlfMf44-ZyM)
+[![CARGO AI 프로젝트 시연 영상](https://img.youtube.com/vi/DlfMf44-ZyM/0.jpg)](https://www.youtube.com/watch?v=DlfMf44-ZyM)
 
 **(▲ 썸네일을 클릭하면 시연 영상으로 이동합니다.)**
